@@ -11,14 +11,10 @@ function addGalleryMarkup(gallery) {
     return gallery.map(({original, preview, description}) => 
         `
         <div class="gallery__item">
-            <a class="gallery__link" href="${original}">
-                <img
-
-                class="gallery__image lazyload"
-                src="${preview}"
-                data-source="${original}"
-                alt="${description}"
-                />
+            <a class="gallery__item" href="${original}">
+            <img class="gallery__image" 
+            src="${preview}" 
+            alt="${description}" />
             </a>
         </div>
         `
@@ -45,8 +41,14 @@ function onImgClikc(e) {
 
 function backdrop(e) {
     
-      const instance = basicLightbox.create(`<img src="${e.target.dataset.source}">`);
-    instance.show();
+    const instance = new SimpleLightbox('.gallery a');
+    // instance.show();
+
+    // instance.addEventListener('mousemuve', titl)
+
+    // function titl(e) {
+    //     e.target.
+    // }
 
     window.addEventListener('keydown', onExitBackdrop);
 
