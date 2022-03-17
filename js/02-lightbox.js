@@ -41,8 +41,15 @@ function onImgClikc(e) {
 
 function backdrop(e) {
     
-    const instance = new SimpleLightbox('.gallery a');
-    // instance.show();
+    const instance = new SimpleLightbox('.gallery a', {
+        className: 'simple-lightbox',
+        captionsData: 'alt', animationSpeed: 250,
+        loop: true,
+        enableKeyboard: true,
+        preloading: true,
+        docClose: true
+    });
+    instance.show.simplelightbox;
 
     // instance.addEventListener('mousemuve', titl)
 
@@ -50,15 +57,15 @@ function backdrop(e) {
     //     e.target.
     // }
 
-    window.addEventListener('keydown', onExitBackdrop);
+    // window.addEventListener('keydown', onExitBackdrop);
 
 }
 
-function onExitBackdrop(e) {
-    if (e.code!=='Escape') {
-        return
-    }
+// function onExitBackdrop(e) {
+//     if (e.code!=='Escape') {
+//         return
+//     }
     
-    document.querySelector('.basicLightbox').remove();
-}
+//     document.querySelector('.simple-lightbox').remove();
+// }
 
