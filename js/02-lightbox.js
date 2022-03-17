@@ -10,13 +10,13 @@ const galleryEl = document.querySelector(".gallery")
 function addGalleryMarkup(gallery) {
     return gallery.map(({original, preview, description}) => 
         `
-        <div class="gallery__item">
+        <li class="gallery__item">
             <a class="gallery__item" href="${original}">
             <img class="gallery__image" 
             src="${preview}" 
-            alt="${description}" />
+            alt="${description}"/>
             </a>
-        </div>
+        </li>
         `
     ).join('')
 }
@@ -34,38 +34,24 @@ function onImgClikc(e) {
         return
     }
     
-     backdrop(e)
+     backdrop()
     
 }
 
 
-function backdrop(e) {
+function backdrop() {
     
     const instance = new SimpleLightbox('.gallery a', {
-        className: 'simple-lightbox',
-        captionsData: 'alt', animationSpeed: 250,
-        loop: true,
-        enableKeyboard: true,
-        preloading: true,
-        docClose: true
-    });
-    instance.show.simplelightbox;
-
-    // instance.addEventListener('mousemuve', titl)
-
-    // function titl(e) {
-    //     e.target.
-    // }
-
-    // window.addEventListener('keydown', onExitBackdrop);
+        
+            animationSpeed: 250,
+            loop: true,
+            enableKeyboard: true,
+            preloading: true,
+        docClose: true,
+        captionsData: 'alt',
+        }
+    );
+    return instance
 
 }
-
-// function onExitBackdrop(e) {
-//     if (e.code!=='Escape') {
-//         return
-//     }
-    
-//     document.querySelector('.simple-lightbox').remove();
-// }
 
