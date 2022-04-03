@@ -20,8 +20,6 @@ function addGalleryMarkup(gallery) {
     ).join('')
 }
 
-
-
 galleryEl.innerHTML = addGalleryMarkup(galleryItems)
 
 const instance = new SimpleLightbox('.gallery a', {
@@ -30,53 +28,9 @@ const instance = new SimpleLightbox('.gallery a', {
             loop: true,
             enableKeyboard: true,
             preloading: true,
-        docClose: true,
-        captionsData: 'alt',
+            docClose: true,
+            captionsData: 'alt',
         }
     );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// galleryEl.addEventListener('click', onImgClikc)
-
-// function onImgClikc(e) {
-//     e.preventDefault()
-    
-//     if (e.target.nodeName !=="IMG") {
-//         return
-//     }
-    
-//      backdrop()
-    
-// }
-
-
-// function backdrop() {
-    
-//     const instance = new SimpleLightbox('.gallery a', {
-        
-//             animationSpeed: 250,
-//             loop: true,
-//             enableKeyboard: true,
-//             preloading: true,
-//         docClose: true,
-//         captionsData: 'alt',
-//         }
-//     );
-//     return instance
-
-// }
 

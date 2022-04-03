@@ -1,11 +1,7 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-
-
-
 console.log(galleryItems);
-
 
 const galleryEl = document.querySelector(".gallery")
 
@@ -39,7 +35,6 @@ function onImgClikc(e) {
     
      backdrop(e)    
 }
-
 
 function backdrop(e) {
       const instance = basicLightbox.create(`<img src="${e.target.dataset.source}">`);
